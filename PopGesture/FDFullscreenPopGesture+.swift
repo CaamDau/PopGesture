@@ -11,13 +11,13 @@ import FDFullscreenPopGesture
 import CaamDauCompatible
 public extension CaamDau where Base: UINavigationController {
     /// 导航栏滑动手势、处理用户的侧滑弹出操作
-    public var gestureRecognizer:UIPanGestureRecognizer {
+    var gestureRecognizer:UIPanGestureRecognizer {
         get{
             return base.fd_fullscreenPopGestureRecognizer
         }
     }
     ///视图控制器可以自己控制，而不是全局的方式控制，导航栏的外观。，默认是YES
-    public var navigationBarAppearanceEnabled:Bool {
+    var navigationBarAppearanceEnabled:Bool {
         get{
             return base.fd_viewControllerBasedNavigationBarAppearanceEnabled
         }
@@ -32,7 +32,7 @@ public extension CaamDau where Base: UINavigationController {
 
 public extension CaamDau where Base: UIViewController {
     ///viewcontroller的侧滑功能是否禁用 默认启用
-    public var popDisabled:Bool {
+    var popDisabled:Bool {
         get{
             return base.fd_interactivePopDisabled
         }
@@ -44,7 +44,7 @@ public extension CaamDau where Base: UIViewController {
         return self
     }
     /// 导航栏是否隐藏
-    public var navigationBarHidden:Bool {
+    var navigationBarHidden:Bool {
         get{
             return base.fd_prefersNavigationBarHidden
         }
